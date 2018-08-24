@@ -65,6 +65,8 @@ public class BonifyLoginPage {
 		driver.findElement(login).click();
 
 	}
+	
+	// Click on register button
 
 	public void clickRegister() {
 
