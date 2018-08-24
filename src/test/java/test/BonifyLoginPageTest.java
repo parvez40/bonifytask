@@ -30,8 +30,6 @@ public class BonifyLoginPageTest {
 
 		driver = new FirefoxDriver();
 
-		// driver = new FirefoxDriver();
-
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		driver.get(testUrl);
@@ -203,7 +201,7 @@ public class BonifyLoginPageTest {
 
 		objLogin.loginToBonify("testuser@yopmail.com", "test123#");
 
-		// Verify Logged In Success
+		// Verify Logged In Success and user is in profile page
 
 		String loggedInSuccessMessage = objProfile.getLoggedInSuccessMessage();
 
@@ -214,7 +212,7 @@ public class BonifyLoginPageTest {
 	@Test(priority = 8)
 	public void LogoutTest() throws Exception {
 
-		// Create Login Page object
+		// Create Profile Page object
 
 		objProfile = new BonifyProfilePage(driver);
 

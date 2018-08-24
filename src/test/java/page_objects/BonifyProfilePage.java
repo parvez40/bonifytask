@@ -36,7 +36,7 @@ public class BonifyProfilePage {
 
 	}
 
-	// Click on Abmelden Link
+	// Click on Abmelden/Logout Link
 
 	public void clickLogout() {
 

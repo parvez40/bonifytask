@@ -1,0 +1,3 @@
+test\BonifyLoginPageTest.class
+page_objects\BonifyLoginPage.class
+page_objects\BonifyProfilePage.class
