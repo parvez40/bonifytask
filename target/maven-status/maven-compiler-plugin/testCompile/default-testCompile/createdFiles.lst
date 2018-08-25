@@ -1,3 +1,4 @@
-test\BonifyLoginPageTest.class
+page_objects\BonifyRegisterPage.class
 page_objects\BonifyLoginPage.class
+test\BonifyTestSuite.class
 page_objects\BonifyProfilePage.class

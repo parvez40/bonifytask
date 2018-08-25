@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class BonifyProfilePage {
 
-	WebDriver driver;
+	protected WebDriver driver;
 
 	By loggedInSuccessMessage = By.xpath("//*[@id=\"dashboard\"]/section[1]/div[1]/div/div[1]/div/div/span");
 

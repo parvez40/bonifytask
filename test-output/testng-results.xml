@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="23556" started-at="2018-08-25T12:33:04Z" finished-at="2018-08-25T12:33:27Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="23556" started-at="2018-08-25T12:33:04Z" finished-at="2018-08-25T12:33:27Z">
+      <class name="test.BonifyTestSuite">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.BonifyTestSuite@ae45eb6]" name="setup" is-config="true" duration-ms="7918" started-at="2018-08-25T12:33:04Z" finished-at="2018-08-25T12:33:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="blankLoginTest()[pri:1, instance:test.BonifyTestSuite@ae45eb6]" name="blankLoginTest" duration-ms="951" started-at="2018-08-25T12:33:12Z" finished-at="2018-08-25T12:33:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankLoginTest -->
+        <test-method status="PASS" signature="blankEmailLoginTest()[pri:2, instance:test.BonifyTestSuite@ae45eb6]" name="blankEmailLoginTest" duration-ms="416" started-at="2018-08-25T12:33:13Z" finished-at="2018-08-25T12:33:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankEmailLoginTest -->
+        <test-method status="PASS" signature="blankPasswordLoginTest()[pri:3, instance:test.BonifyTestSuite@ae45eb6]" name="blankPasswordLoginTest" duration-ms="2193" started-at="2018-08-25T12:33:13Z" finished-at="2018-08-25T12:33:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankPasswordLoginTest -->
+        <test-method status="PASS" signature="InvalidLoginTest()[pri:4, instance:test.BonifyTestSuite@ae45eb6]" name="InvalidLoginTest" duration-ms="1694" started-at="2018-08-25T12:33:15Z" finished-at="2018-08-25T12:33:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidLoginTest -->
+        <test-method status="PASS" signature="ForgotPasswordLinkTest()[pri:5, instance:test.BonifyTestSuite@ae45eb6]" name="ForgotPasswordLinkTest" duration-ms="343" started-at="2018-08-25T12:33:17Z" finished-at="2018-08-25T12:33:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ForgotPasswordLinkTest -->
+        <test-method status="PASS" signature="RegisterLinkTest()[pri:6, instance:test.BonifyTestSuite@ae45eb6]" name="RegisterLinkTest" duration-ms="1031" started-at="2018-08-25T12:33:17Z" finished-at="2018-08-25T12:33:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterLinkTest -->
+        <test-method status="PASS" signature="ValidLoginTest()[pri:7, instance:test.BonifyTestSuite@ae45eb6]" name="ValidLoginTest" duration-ms="1766" started-at="2018-08-25T12:33:18Z" finished-at="2018-08-25T12:33:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidLoginTest -->
+        <test-method status="PASS" signature="LogoutTest()[pri:8, instance:test.BonifyTestSuite@ae45eb6]" name="LogoutTest" duration-ms="2721" started-at="2018-08-25T12:33:20Z" finished-at="2018-08-25T12:33:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoutTest -->
+        <test-method status="PASS" signature="existUserRegistrationTest()[pri:9, instance:test.BonifyTestSuite@ae45eb6]" name="existUserRegistrationTest" duration-ms="2784" started-at="2018-08-25T12:33:23Z" finished-at="2018-08-25T12:33:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- existUserRegistrationTest -->
+        <test-method status="PASS" signature="ImpressumLinkTest()[pri:10, instance:test.BonifyTestSuite@ae45eb6]" name="ImpressumLinkTest" duration-ms="47" started-at="2018-08-25T12:33:26Z" finished-at="2018-08-25T12:33:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ImpressumLinkTest -->
+        <test-method status="PASS" signature="AgbLinkTest()[pri:11, instance:test.BonifyTestSuite@ae45eb6]" name="AgbLinkTest" duration-ms="140" started-at="2018-08-25T12:33:26Z" finished-at="2018-08-25T12:33:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AgbLinkTest -->
+        <test-method status="PASS" signature="DatenschutzLinkTest()[pri:12, instance:test.BonifyTestSuite@ae45eb6]" name="DatenschutzLinkTest" duration-ms="1473" started-at="2018-08-25T12:33:26Z" finished-at="2018-08-25T12:33:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DatenschutzLinkTest -->
+      </class> <!-- test.BonifyTestSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

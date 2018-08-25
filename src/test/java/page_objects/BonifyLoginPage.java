@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class BonifyLoginPage {
 
-	WebDriver driver;
+	protected WebDriver driver;
 
 	By loginEmail = By.name("email");
 

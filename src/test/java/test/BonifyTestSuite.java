@@ -10,14 +10,16 @@ import org.testng.annotations.Test;
 
 import page_objects.BonifyLoginPage;
 import page_objects.BonifyProfilePage;
+import page_objects.BonifyRegisterPage;
 
-public class BonifyLoginPageTest {
+public class BonifyTestSuite {
 
-	WebDriver driver;
+	protected WebDriver driver;
 	BonifyLoginPage objLogin;
 	BonifyProfilePage objProfile;
+	BonifyRegisterPage objRegistration;
 
-	String testUrl = "http://my.bonify.de";
+	private String testUrl = "http://my.bonify.de";
 	String projectLocation = System.getProperty("user.dir");
 	String gecko_driver = "webdriver.gecko.driver";
 	String gekco_driver_path = projectLocation + "/lib/geckodriver/geckodriver.exe";
@@ -66,10 +68,6 @@ public class BonifyLoginPageTest {
 	@Test(priority = 2)
 	public void blankEmailLoginTest() throws Exception {
 
-		// Refresh the page
-
-		driver.navigate().refresh();
-
 		// Create Login Page object
 
 		objLogin = new BonifyLoginPage(driver);
@@ -80,7 +78,7 @@ public class BonifyLoginPageTest {
 
 		// Implicit Wait for messages to be appeared
 
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Verify Error Messages
 
@@ -134,7 +132,7 @@ public class BonifyLoginPageTest {
 
 		// Implicit Wait for message to be appeared
 
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Verify Error Messages
 
@@ -201,6 +199,10 @@ public class BonifyLoginPageTest {
 
 		objLogin.loginToBonify("testuser@yopmail.com", "test123#");
 
+		// Implicit Wait for profile page to be appeared
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 		// Verify Logged In Success and user is in profile page
 
 		String loggedInSuccessMessage = objProfile.getLoggedInSuccessMessage();
@@ -208,7 +210,7 @@ public class BonifyLoginPageTest {
 		Assert.assertTrue(loggedInSuccessMessage.contains("Hey Parvez, schön Dich zu sehen!"));
 
 	}
-	
+
 	@Test(priority = 8)
 	public void LogoutTest() throws Exception {
 
@@ -220,10 +222,14 @@ public class BonifyLoginPageTest {
 
 		objProfile.clickProfile();
 
+		// Implicit Wait for drop down menu to be appeared to be appeared
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 		// Click on logout button
-		//Thread.sleep(2000);
 
 		objProfile.clickLogout();
+		Thread.sleep(2000);
 
 		// Verify Logged Out Success
 
@@ -234,6 +240,45 @@ public class BonifyLoginPageTest {
 	}
 
 	@Test(priority = 9)
+	public void existUserRegistrationTest() throws Exception {
+
+		// Create Login Page object
+
+		objLogin = new BonifyLoginPage(driver);
+
+		// Create Registration Page object
+
+		objRegistration = new BonifyRegisterPage(driver);
+
+		// Click on Register Button
+
+		objLogin.clickRegister();
+
+		// Type existing username or email
+
+		objRegistration.setUserName("testuser@yopmail.com");
+
+		// Type password
+
+		objRegistration.setPassword("test1234#");
+
+		// Click Register Button
+		objRegistration.clickRegister();
+
+		// Implicit Wait for messages to be appeared
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
+
+		// Verify Error Messages
+
+		String emailExistErrorMessage = objRegistration.getEmailExistErrorMessage();
+
+		Assert.assertTrue(emailExistErrorMessage.contains("Dieser Nutzername existiert bereits"));
+
+	}
+
+	@Test(priority = 10)
 	public void ImpressumLinkTest() throws Exception {
 
 		// Create Login Page object
@@ -243,11 +288,11 @@ public class BonifyLoginPageTest {
 		// Click Forgot Password Link
 
 		objLogin.clickImpressum();
-		//Thread.sleep(2000);
+		// Thread.sleep(2000);
 
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 11)
 	public void AgbLinkTest() throws Exception {
 
 		// Create Login Page object
@@ -257,11 +302,11 @@ public class BonifyLoginPageTest {
 		// Click Forgot Password Link
 
 		objLogin.clickAgb();
-		//Thread.sleep(2000);
+		// Thread.sleep(2000);
 
 	}
 
-	@Test(priority = 11)
+	@Test(priority = 12)
 	public void DatenschutzLinkTest() throws Exception {
 
 		// Create Login Page object
@@ -271,7 +316,7 @@ public class BonifyLoginPageTest {
 		// Click Forgot Password Link
 
 		objLogin.clickDatenschutz();
-		//Thread.sleep(2000);
+		// Thread.sleep(2000);
 
 		driver.quit();
 
