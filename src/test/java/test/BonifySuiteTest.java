@@ -12,7 +12,7 @@ import page_objects.BonifyLoginPage;
 import page_objects.BonifyProfilePage;
 import page_objects.BonifyRegisterPage;
 
-public class BonifyTestSuite {
+public class BonifySuiteTest {
 
 	protected WebDriver driver;
 	BonifyLoginPage objLogin;
